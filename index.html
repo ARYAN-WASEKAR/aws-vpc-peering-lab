@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS VPC Peering Lab | Aryan Wasekar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    header {
+      background: #14213d;
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    header h1 { margin-bottom: 8px; }
+    main { max-width: 900px; margin: 28px auto; padding: 0 18px; }
+    section {
+      background: white;
+      padding: 24px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #0000000c;
+    }
+    h2 { color: #1769aa; }
+    code {
+      background: #eaf1f8;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+    a { color: #1769aa; }
+    footer { text-align: center; padding: 24px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AWS VPC Peering Lab</h1>
+    <p>Private communication between two Amazon VPCs</p>
+    <p>Project by Aryan Wasekar</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>This project demonstrates private network communication
+      between two AWS Virtual Private Clouds using VPC Peering,
+      EC2 instances, route tables, and security groups.</p>
+    </section>
+
+    <section>
+      <h2>Architecture</h2>
+      <p><strong>VPC A:</strong> 10.10.0.0/16</p>
+      <p><strong>VPC B:</strong> 10.20.0.0/16</p>
+      <p><strong>App-A:</strong> 10.10.2.10 (private IP)</p>
+      <p><strong>App-B:</strong> 10.20.1.10 (private IP)</p>
+      <p>The VPC peering connection and route tables allow traffic
+      between the two private networks, subject to security rules.</p>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li>Amazon VPC and VPC Peering</li>
+        <li>Amazon EC2</li>
+        <li>Public and private subnets</li>
+        <li>Route tables and security groups</li>
+        <li>Linux SSH and ICMP ping testing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Test Results</h2>
+      <p>App-A successfully pinged App-B at
+      <code>10.20.1.10</code>, receiving 4 packets with
+      0% packet loss during the recorded test.</p>
+      <p>This demonstrates private IP connectivity between the VPCs.</p>
+    </section>
+
+    <section>
+      <h2>Project Repository</h2>
+      <p><a href="https://github.com/ARYAN-WASEKAR/aws-vpc-peering-lab">
+      View the project on GitHub</a></p>
+    </section>
+  </main>
+
+  <footer>AWS Cloud Networking Project | Aryan Wasekar</footer>
+</body>
+</html>
